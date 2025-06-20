@@ -1,5 +1,6 @@
-triggers:
-  - source: ci.yml
+outbound:
+  - source:
+      workflow: ci.yml
     targets:
       - repository: dispatcher-example-target
         workflow: cd.yml
