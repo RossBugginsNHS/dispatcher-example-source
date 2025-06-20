@@ -1,0 +1,5 @@
+triggers:
+  - source: ci.yml
+    targets:
+      - repository: dispatcher-example-target
+        workflow: cd.yml
