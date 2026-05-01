@@ -4,3 +4,7 @@ outbound:
     targets:
       - repository: dispatcher-example-target
         workflow: cd.yml
+        inputs:                 # optional: input values to forward to the dispatched workflow
+          git_sha: "{{ source.sha }}"           # resolved from the source run
+          triggered_by: "{{ source.run_url }}"  # resolved from the source run
+          environment: production               # literal passthrough
